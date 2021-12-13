@@ -8,9 +8,9 @@ class Criptomonedas {
     event() {
         $(document).ready(() => {
             consultarCripto();
-            $('#formulario').click('submit', submitFormulario);
-            $('#criptomonedas').change(() => leerValor);
-            $('#moneda').change(() => leerValor);
+            $('#formulario').submit(submitFormulario);
+            $('#criptomonedas').change(leerValor);
+            $('#moneda').change(leerValor);
         });
     }
 }

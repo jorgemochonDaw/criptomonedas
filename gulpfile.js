@@ -9,7 +9,7 @@ const imagemin = require('gulp-imagemin'); //nos permite optimizar las imagenes
 const avif = require("gulp-avif"); //nos permite aligerar las imgs, son mas ligeras que webp
 
 function css(done) {
-    src("sass/**/*.scss") //identificar archivo .scss
+    src("./sass/*.scss") //identificar archivo .scss
         .pipe(plumber()) //te permite que al tener un error no se detenga la app
         .pipe(sass()) //compilarlo
         .pipe(dest("./build/css")); //almacenarlo en el disco duro
@@ -20,7 +20,7 @@ function optimizarImagenes(done) {
     const opciones = {
         optimizationLevel: 3,
     };
-    src("img/**/*.{png,jpg}")
+    src("img/*.{png,jpg}")
         .pipe(cache(imagemin(opciones)))
         .pipe(dest("./build/img"));
     done();
@@ -38,12 +38,12 @@ function versionWebp(done) {
     const opciones = {
         quality: 50,
     };
-    src("img/**/*.{png,jpg}").pipe(webp(opciones)).pipe(dest("./build/img"));
+    src("img/*.{png,jpg}").pipe(webp(opciones)).pipe(dest("./build/img"));
     done();
 }
 
 function dev(done) {
-    watch("sass/**/*.scss", css);
+    watch("sass/*.scss", css);
     done();
 }
 
