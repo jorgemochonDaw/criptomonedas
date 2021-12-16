@@ -13,6 +13,28 @@ export function selectCripto(criptomonedas) {
 
 export function leerValor(e)  {
     objDineros[e.target.name] = e.target.value;
+    notificacion(objDineros);
+}
+
+export default function notificacion(valores) {
+
+    console.log(valores);
+    if (valores.criptomoneda != "") {
+        console.log('fd');
+        switch (valores.criptomoneda) {
+            case 'BTC':
+                Notification.requestPermission()
+                if (Notification.permission === 'granted') {
+                    const notificacion = new Notification('g', {
+                        icon: './../../img/bitcoin.jpg',
+                        body: 'Visitar página oficial Bitcoin'
+                    });
+
+                    notificacion.onclick = () => { window.open('https://bitcoin.org/es/') };
+                }
+                break;
+        }
+    }
 }
 
 export function submitFormulario(e) {
