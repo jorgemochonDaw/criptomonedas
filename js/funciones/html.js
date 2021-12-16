@@ -1,6 +1,5 @@
 export function mostrarCotizacionHTML(cotizacion) {
     limpiarHTML();
-    console.log(cotizacion);
     const { PRICE, HIGHDAY, LOWDAY, CHANGEPCT24HOUR, LASTUPDATE  } = cotizacion;
     const precio = document.createElement('p');
     precio.classList.add('precio');
@@ -22,7 +21,6 @@ export function mostrarCotizacionHTML(cotizacion) {
 }
 
 export function mostrarSpinner() {
-    console.log('s');
     limpiarHTML();
     $('<div>').addClass('spinner').html(
         `

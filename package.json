@@ -19,5 +19,13 @@
   "dependencies": {
     "gulp-avif": "^1.0.1",
     "gulp-cache": "^1.1.3"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jorgemochonDaw/criptomonedas.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jorgemochonDaw/criptomonedas/issues"
+  },
+  "homepage": "https://github.com/jorgemochonDaw/criptomonedas#readme"
 }

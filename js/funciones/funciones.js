@@ -27,7 +27,7 @@ export function submitFormulario(e) {
 
 function mostrarAlerta(mensaje) {
     const divMensaje = $('<p>').text(mensaje).addClass('error').appendTo('#formulario');
-    // setTimeout(() => {
-    //     divMensaje.remove();
-    // }, 3000);
+    setTimeout(() => {
+        divMensaje.remove();
+    }, 3000);
 }
