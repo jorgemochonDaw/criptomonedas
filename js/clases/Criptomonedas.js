@@ -1,6 +1,5 @@
 import { submitFormulario, leerValor } from './../funciones/funciones.js';
 import { consultarCripto } from './../funciones/promesas.js';
-import { ejecutarMicrofono } from './../funciones/voz.js';
 class Criptomonedas {
     constructor() {
         this.event();
@@ -12,7 +11,6 @@ class Criptomonedas {
             $('#formulario').submit(submitFormulario);
             $('#criptomonedas').change(leerValor);
             $('#moneda').change(leerValor);
-            $('#microfono').click(ejecutarMicrofono);
         });
     }
 }
