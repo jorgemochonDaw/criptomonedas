@@ -1,3 +1,7 @@
+
+/** Funcion en la cual muestra de forma visual el resultado a pedir del usuario.
+ * Ejecutamos la funcion limpiarHtml para limpiar la pagina una vez echo refresh
+*/
 export function mostrarCotizacionHTML(cotizacion) {
     limpiarHTML();
     const { PRICE, HIGHDAY, LOWDAY, CHANGEPCT24HOUR, LASTUPDATE  } = cotizacion;
@@ -20,6 +24,8 @@ export function mostrarCotizacionHTML(cotizacion) {
     formulario.appendChild(resultado);
 }
 
+
+/** Funcion en la cual creamos el spinner y lo añadimos al html para que se visualice.*/
 export function mostrarSpinner() {
     limpiarHTML();
     $('<div>').addClass('spinner').html(
@@ -31,6 +37,8 @@ export function mostrarSpinner() {
     ).appendTo('#resultado');
 }
 
+
+/** Limpiamos el resultado en caso de refresh*/
 function limpiarHTML() {
     while (resultado.firstChild) {
         resultado.removeChild(resultado.firstChild);

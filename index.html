@@ -12,7 +12,11 @@
     <div class="container">
         <div class="row">
             <div class="one-half column">
-                <img src="img/cryptomonedas.png">
+                <picture>
+                    <source srcset="./build/img/cryptomonedas.avif" type="image/avif">
+                    <source srcset="./build/img/cryptomonedas.webp" type="image/webp">
+                    <img loading="lazy" src="./build/img/cryptomonedas.png" alt="imagen vocalista">
+                </picture>
             </div>
             <div class="one-half column">
                 <form id="formulario">
